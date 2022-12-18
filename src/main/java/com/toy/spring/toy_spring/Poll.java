@@ -13,15 +13,18 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/PollListServlet")
+@WebServlet("/pollListServlet")
 public class Poll extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        System.out.println("Call");
         response.setContentType("text/html;charset=UTF-8");
 
+        String name = request.getParameter("user");
+        String belong = request.getParameter("belong");
         String title = "Poll List Servlet";
         PrintWriter pw = response.getWriter();
 
@@ -44,7 +47,8 @@ public class Poll extends HttpServlet {
         pw.println("</head>");
         pw.println("<body>");
         pw.println("<div class='container'>");
-        pw.println("<div class='fs-3 my-3'>" + title + "</div>");
+        pw.println("<div class='fs-3 my-3'>" + name + " " + belong + "</div>");
+        pw.println("<div class='fs-5 my-3'>" + title + "</div>");
         pw.println("<div>");
         for (int i = 0; i < questionIds.length; i++) {
             // "Q1", "Q2", "Q3", "Q4", "Q5" - ID에 맞는 질문 Text 꺼내기

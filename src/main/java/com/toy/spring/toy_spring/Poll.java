@@ -7,18 +7,16 @@ import java.util.HashMap;
 
 import com.toy.spring.toy_spring.beans.poll.PollData;
 
-import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/pollListServlet")
+@WebServlet(urlPatterns = "/PollListServlet")
 public class Poll extends HttpServlet {
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         System.out.println("Call");
         response.setContentType("text/html;charset=UTF-8");
@@ -38,19 +36,16 @@ public class Poll extends HttpServlet {
         pw.println("<!DOCTYPE html>");
         pw.println("<html lang='en'>");
         pw.println("<head>");
-        pw.println("<meta charset='UTF-8'>");
-        pw.println("<meta http-equiv='X-UA-Compatible' content='IE=edge'>");
-        pw.println("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
         pw.println(
                 "<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css'>");
         pw.println("<title>" + title + "</title>");
         pw.println("</head>");
         pw.println("<body>");
         pw.println("<div class='container'>");
-        pw.println("<div class='fs-3 my-3'>" + name + " " + belong + "</div>");
-        pw.println("<div class='fs-5 my-3'>" + title + "</div>");
-        pw.println("<div>");
+        pw.println("<div class='fs-1 my-3'>" + title + "</div>");
+        pw.println("<div class='fs-5 my-3'>Name : " + name + " Belong : " + belong + "</div>");
         for (int i = 0; i < questionIds.length; i++) {
+            pw.println("<div class='my-3'>");
             // "Q1", "Q2", "Q3", "Q4", "Q5" - ID에 맞는 질문 Text 꺼내기
             String value = questions.get(questionIds[i]);
             pw.println("<div>" + (i + 1) + ". " + value + "</div>");

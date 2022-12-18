@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Spring Servlet</title>
+</head>
+
+<body>
+    <div class="container">
+        <h3 class="my-3">Toy Spring & Servlet</h3>
+        <form action="/PollListServlet">
+            <div class="row my-3 d-flex align-items-end">
+                <div class="col-12 col-sm-4 my-3">
+                    <label class="form-label" for="user">사용자명</label>
+                    <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <label class="form-label" for="belong">소속</label>
+                    <input class="form-control" type="text" name="belong" id="belong" placeholder="Belong to ...">
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+    "></script>
+</body>
+
+</html>

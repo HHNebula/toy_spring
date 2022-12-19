@@ -1,4 +1,4 @@
-package com.toy.spring.toy_spring;
+package com.toy.spring.toy_spring.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,6 @@ public class Poll extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        System.out.println("Call");
         response.setContentType("text/html;charset=UTF-8");
 
         String name = request.getParameter("user");
@@ -43,7 +42,8 @@ public class Poll extends HttpServlet {
         pw.println("<body>");
         pw.println("<div class='container'>");
         pw.println("<div class='fs-1 my-3'>" + title + "</div>");
-        pw.println("<div class='fs-5 my-3'>Name : " + name + " Belong : " + belong + "</div>");
+        pw.println("<div class='fs-5 my-3'>Name : " + name + "</div>");
+        pw.println("<div class='fs-5 my-3'>Belong : " + belong + "</div>");
         for (int i = 0; i < questionIds.length; i++) {
             pw.println("<div class='my-3'>");
             // "Q1", "Q2", "Q3", "Q4", "Q5" - ID에 맞는 질문 Text 꺼내기

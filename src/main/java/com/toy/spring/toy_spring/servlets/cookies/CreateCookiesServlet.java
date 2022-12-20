@@ -1,4 +1,4 @@
-package com.toy.spring.toy_spring.servlets;
+package com.toy.spring.toy_spring.servlets.cookies;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/cookies/createCookiesServlet")
+@WebServlet(urlPatterns = "/createCookie")
 public class CreateCookiesServlet extends HttpServlet {
 
     @Override
@@ -17,9 +17,11 @@ public class CreateCookiesServlet extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
 
-        // Cookie
+        // Cookie 굽기
         Cookie firstCookie = new Cookie("fristName", "SUNGSOO");
         Cookie secondCookie = new Cookie("secondName", "HA");
+
+        // 응답에 쿠키 추가하기
         response.addCookie(firstCookie);
         response.addCookie(secondCookie);
 

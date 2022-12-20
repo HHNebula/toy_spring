@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.toy.spring.toy_spring.beans.poll.PollData;
+import com.toy.spring.toy_spring.beans.PollData;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -66,7 +66,6 @@ public class Poll extends HttpServlet {
                 "<script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js'></script>");
         pw.println("</body>");
         pw.println("</html>");
-        pw.flush();
         pw.close();
     }
 

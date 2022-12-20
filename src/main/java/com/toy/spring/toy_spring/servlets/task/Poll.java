@@ -1,4 +1,4 @@
-package com.toy.spring.toy_spring.servlets;
+package com.toy.spring.toy_spring.servlets.task;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+// Poll List Servlet
 @WebServlet(urlPatterns = "/PollListServlet")
 public class Poll extends HttpServlet {
 

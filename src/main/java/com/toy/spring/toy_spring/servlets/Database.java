@@ -22,13 +22,14 @@ public class Database extends HttpServlet {
 
         SimpleWithDB simpleWithDB = new SimpleWithDB();
         ArrayList<HashMap> bundleList = simpleWithDB.getList();
-        for (int i = 0; i < bundleList.size(); i++) {
-            HashMap<String, Object> bundle = bundleList.get(i);
-            HashMap<String, Object> question = (HashMap<String, Object>) bundle.get("question");
-            int orders = (int) question.get("ORDERS");
-            String questions = (String) question.get("QUESTIONS");
-            String questionsUid = (String) question.get("QUESTIONS_UID");
-        }
+        // for (int i = 0; i < bundleList.size(); i++) {
+        // HashMap<String, Object> bundle = bundleList.get(i);
+        // HashMap<String, Object> question = (HashMap<String, Object>)
+        // bundle.get("question");
+        // int orders = (int) question.get("ORDERS");
+        // String questions = (String) question.get("QUESTIONS");
+        // String questionsUid = (String) question.get("QUESTIONS_UID");
+        // }
 
         PrintWriter pw = response.getWriter();
         pw.println("<div>SimpleWithDBServlets</div>");

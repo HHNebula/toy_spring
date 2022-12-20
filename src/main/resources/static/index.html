@@ -11,27 +11,40 @@
 
 <body>
     <div class="container">
-        <h3 class="my-3 text-center">Toy Spring & Servlet</h3>
-        <div>
-            <div class="fs-4 my-3">Servlets</div>
-            <hr class="hr">
-            <form action="/PollListServlet">
-                <fieldset>Poll List Servlet</fieldset>
-                <div class="row my-3 d-flex align-items-end">
-                    <div class="col-12 col-sm-4 my-3">
-                        <label class="form-label" for="user">사용자명</label>
-                        <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <label class="form-label" for="belong">소속</label>
-                        <input class="form-control" type="text" name="belong" id="belong" placeholder="Belong to ...">
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
-                    </div>
-                </div>
-            </form>
+        <div class="my-3 fs-2 text-center">Toy Spring & Servlet</div>
+        <div class="fs-4 my-3">Servlets</div>
+        <hr class="hr">
+        <div class="fs-5 my-3">Basic Servlet</div>
+        <div class="my-3">
+            <div class="my-1">HelloWorldServlets : 화면에 출력하는 기본적인 서블릿</div>
+            <a href="/helloWorldServlets" class="btn btn-primary my-1">Run</a>
         </div>
+        <div class="my-3">
+            <div class="my-1">FormsSelectsServlet : Bootstrap을 사용하여 Form Select 출력하기</div>
+            <a href="/formsSelectsServlet" class="btn btn-primary my-1">Run</a>
+        </div>
+
+
+
+
+
+
+        <form action="/PollListServlet">
+            <fieldset>Poll List Servlet</fieldset>
+            <div class="row my-3 d-flex align-items-end">
+                <div class="col-12 col-sm-4 my-3">
+                    <label class="form-label" for="user">사용자명</label>
+                    <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <label class="form-label" for="belong">소속</label>
+                    <input class="form-control" type="text" name="belong" id="belong" placeholder="Belong to ...">
+                </div>
+                <div class="col-12 col-sm-4 my-3">
+                    <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
+                </div>
+            </div>
+        </form>
         <hr class="hr">
     </div>
 

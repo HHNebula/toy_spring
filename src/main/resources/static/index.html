@@ -62,39 +62,50 @@
                 <a href="/createSession?username=SOO&password=5525" class="btn btn-primary my-1 w-100">Run Servlet</a>
             </div>
             <div class="my-3 col-12 col-md-4">
-                <div class="fs-5 my-1">Get and Delete Session</div>
-                <div class="my-1">저장된 세션 출력 및 삭제하기</div>
-                <a href="/getAndDeleteSession" class="btn btn-primary my-1 w-100">Run Servlet</a>
+                <div class="fs-5 my-1">Get Session</div>
+                <div class="my-1">저장된 세션 출력</div>
+                <a href="/getSession" class="btn btn-primary my-1 w-100">Run Servlet</a>
             </div>
         </div>
-
         <hr class="hr">
-        <div class="fs-3">Task</div>
-        <hr class="hr">
-        <div class="fs-3">PollListServlet</div>
+        <div class="fs-4">Dispatcher</div>
         <div class="row">
-            <form action="/PollListServlet">
-                <fieldset class="my-1">Request Param 및 설문 문항 출력하기 과제 </fieldset>
-                <div class="row my-3 d-flex align-items-end">
-                    <div class="col-12 col-sm-4 my-3">
-                        <label class="form-label" for="user">사용자명</label>
-                        <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
+            <div class="my-3 col-12 col-md-4">
+                <div class="fs-5 my-1">Dispatcher Request</div>
+                <div class="my-1">hidden Param으로 Dispatch</div>
+                <a href="/dispatcherRequest" class="btn btn-primary my-1 w-100">Run Servlet</a>
+                <a href="/dispatcherRequest?hidden=hidden" class="btn btn-primary my-1 w-100">Run Servlet with hidden
+                    Param</a>
+            </div>
+
+            <hr class="hr">
+            <div class="fs-3">Task</div>
+            <hr class="hr">
+            <div class="fs-3">PollListServlet</div>
+            <div class="row">
+                <form action="/PollListServlet">
+                    <fieldset class="my-1">Request Param 및 설문 문항 출력하기 과제 </fieldset>
+                    <div class="row my-3 d-flex align-items-end">
+                        <div class="col-12 col-sm-4 my-3">
+                            <label class="form-label" for="user">사용자명</label>
+                            <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
+                        </div>
+                        <div class="col-12 col-sm-4 my-3">
+                            <label class="form-label" for="belong">소속</label>
+                            <input class="form-control" type="text" name="belong" id="belong"
+                                placeholder="Belong to ...">
+                        </div>
+                        <div class="col-12 col-sm-4 my-3">
+                            <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
+                        </div>
                     </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <label class="form-label" for="belong">소속</label>
-                        <input class="form-control" type="text" name="belong" id="belong" placeholder="Belong to ...">
-                    </div>
-                    <div class="col-12 col-sm-4 my-3">
-                        <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <hr class="hr">
         </div>
-        <hr class="hr">
-    </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
     "></script>
 </body>
 

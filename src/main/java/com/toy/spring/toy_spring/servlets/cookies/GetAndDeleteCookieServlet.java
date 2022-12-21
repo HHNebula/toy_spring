@@ -14,6 +14,7 @@ public class GetAndDeleteCookieServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
         PrintWriter pw = response.getWriter();
         pw.println("<div>Get And Delete Cookie</div>");
 
@@ -35,8 +36,11 @@ public class GetAndDeleteCookieServlet extends HttpServlet {
                 cookie.setMaxAge(0);
                 response.addCookie(cookie);
             }
+
         }
+
         pw.close();
+
     }
 
 }

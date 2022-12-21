@@ -1,4 +1,4 @@
-package com.toy.spring.toy_spring.servlets;
+package com.toy.spring.toy_spring.servlets.basic;
 
 import java.io.IOException;
 import java.io.PrintWriter;

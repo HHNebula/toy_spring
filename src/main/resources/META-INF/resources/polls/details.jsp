@@ -19,14 +19,14 @@
 %>
 
         <div>
-            <a href="/PollListServlet/JSP?Qid=1">Prev</a>
-            <a href="/PollListServlet/JSP?Qid=2">Prev</a>
-            <a href="/PollListServlet/JSP?Qid=3">Prev</a>
-            <a href="/PollListServlet/JSP?Qid=4">Prev</a>
-            <a href="/PollListServlet/JSP?Qid=5">Prev</a>
+            <a href="/PollListServlet/JSP?Qid=Q1">q1</a>
+            <a href="/PollListServlet/JSP?Qid=Q2">q2</a>
+            <a href="/PollListServlet/JSP?Qid=Q3">q3</a>
+            <a href="/PollListServlet/JSP?Qid=Q4">q4</a>
+            <a href="/PollListServlet/JSP?Qid=Q5">q5</a>
         </div>
         <div>
-            <%= question.get("order")%>. <%= question.get(quesrtion)%>
+            <%= question.get("order")%>. <%= question.get("quesrtion")%>
         </div>
         <div>
             answer1

@@ -81,7 +81,7 @@
             <hr class="hr">
             <div class="fs-3">Task</div>
             <hr class="hr">
-            <div class="fs-3">PollListServlet</div>
+            <div class="fs-3">Poll List Servlet</div>
             <div class="row">
                 <form action="/PollListServlet">
                     <fieldset class="my-1">Request Param 및 설문 문항 출력하기 과제 </fieldset>
@@ -102,6 +102,28 @@
                 </form>
             </div>
             <hr class="hr">
+            <div class="fs-3">Poll List Servlet with JSP</div>
+            <div class="row">
+                <form action="/PollListServlet">
+                    <fieldset class="my-1">Request Param 및 설문 문항 출력하기 과제 </fieldset>
+                    <div class="row my-3 d-flex align-items-end">
+                        <div class="col-12 col-sm-4 my-3">
+                            <label class="form-label" for="user">사용자명</label>
+                            <input class="form-control" type="text" name="user" id="user" placeholder="Name is ...">
+                        </div>
+                        <div class="col-12 col-sm-4 my-3">
+                            <label class="form-label" for="belong">소속</label>
+                            <input class="form-control" type="text" name="belong" id="belong"
+                                placeholder="Belong to ...">
+                        </div>
+                        <div class="col-12 col-sm-4 my-3">
+                            <button class="btn btn-primary w-100" type="submit">Run : Poll</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr class="hr">
+
         </div>
 
 

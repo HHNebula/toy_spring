@@ -1,8 +1,8 @@
 package com.toy.spring.toy_spring.servlets.task;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.toy.spring.toy_spring.dao.PollWithDB;
@@ -28,14 +28,20 @@ public class PollWithJSP extends HttpServlet {
         // biz with DB and Class
         PollWithDB pollWithDB = new PollWithDB();
         HashMap<String, Object> questions = null;
+        ArrayList<HashMap> answers = null;
+        ArrayList<String> possibleAnswer = null;
         try {
             questions = pollWithDB.getQuestion(qId);
+            answers = pollWithDB.getAnswer();
+            possibleAnswer = pollWithDB.getPosiibleAnswer(qId);
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
         // output
         request.setAttribute("questions", questions);
+        request.setAttribute("answers", answers);
+        request.setAttribute("possibleAnswers", possibleAnswer);
 
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls/details.jsp");
         requestDispatcher.forward(request, response);

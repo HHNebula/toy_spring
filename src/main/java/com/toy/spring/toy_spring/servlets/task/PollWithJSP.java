@@ -37,7 +37,7 @@ public class PollWithJSP extends HttpServlet {
         // output
         request.setAttribute("questions", questions);
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls/details");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/polls/details.jsp");
         requestDispatcher.forward(request, response);
 
     }

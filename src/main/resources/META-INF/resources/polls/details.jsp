@@ -15,15 +15,15 @@
     <body>
 
 <% 
-    HashMap<String, Object> question = (HashMap<String, Object>) request.getAttribute("question");
+    HashMap<String, Object> question = (HashMap<String, Object>) request.getAttribute("questions");
 %>
 
         <div>
-            <a href="/PollListServlet?Qid=1">Prev</a>
-            <a href="/PollListServlet?Qid=2">Prev</a>
-            <a href="/PollListServlet?Qid=3">Prev</a>
-            <a href="/PollListServlet?Qid=4">Prev</a>
-            <a href="/PollListServlet?Qid=5">Next</a>
+            <a href="/PollListServlet/JSP?Qid=1">Prev</a>
+            <a href="/PollListServlet/JSP?Qid=2">Prev</a>
+            <a href="/PollListServlet/JSP?Qid=3">Prev</a>
+            <a href="/PollListServlet/JSP?Qid=4">Prev</a>
+            <a href="/PollListServlet/JSP?Qid=5">Prev</a>
         </div>
         <div>
             <%= question.get("order")%>. <%= question.get(quesrtion)%>

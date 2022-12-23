@@ -39,8 +39,9 @@
             <%
                 for(String eId : possibleAnswer) {
                     for(HashMap info : answer) {
-                        if(info.get("exampleUid").equals(eId)) {
-                        }
+                        if(info.get("exampleUid").equals(eId)) { %>
+                            <span class='mx-1'><%=info.get("order")%>. <%=info.get("example")%>
+                        <% }
                     }
                 }
             %>

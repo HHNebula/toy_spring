@@ -40,7 +40,8 @@
                 for(String eId : possibleAnswer) {
                     for(HashMap info : answer) {
                         if(info.get("exampleUid").equals(eId)) { %>
-                            <span class='mx-1'><%=info.get("order")%>. <%=info.get("example")%>
+                            <input type="radio" name="answer" id="<%=info.get("order")%>">
+                            <label for="answer"><%=info.get("example")%></label>
                         <% }
                     }
                 }

@@ -6,8 +6,6 @@
         ArrayList<String> possibleAnswer = (ArrayList<String>) request.getAttribute("possibleAnswers");
     %>
 
-</html>
-
 <!DOCTYPE html>
 <html lang='en'>
 
